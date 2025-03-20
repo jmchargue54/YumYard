@@ -1,0 +1,11 @@
+body{
+    background-color: #151C4B;
+    font-family: 'Zain', italic;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-button button{
+    background-color: #FDBF50;
+    color: #151C4B;
+}
