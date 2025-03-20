@@ -1,5 +1,5 @@
 const api = 'https://api.spoonacular.com';
-const key = '6193542d0b6b4048852bcb497aecb59b';
+const key = '6193542d0b6b4048852bcb497aecb59b'; // Jenna's API key
 
 export async function getRandomRecipes(number = 5) {
     try {
