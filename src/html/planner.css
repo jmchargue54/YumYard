@@ -45,7 +45,6 @@ nav a {
     padding: 0;
     margin: 10px;
     border: 2px solid;
-    border-radius: 60px;
 }
 
 .meal-card h2 {
@@ -64,13 +63,13 @@ nav a {
     color: var(--secondary-color);
     text-align: center;
     padding: 50px;
-    border-radius: 50px;
 }
 
 .meals {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
+    background-color: var(--secondary-color);
 }
 
 footer {
