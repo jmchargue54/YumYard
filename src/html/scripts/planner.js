@@ -36,7 +36,7 @@ var tomorrow_date = tomorrow.getDate();
 var tomorrow_month = tomorrow.getMonth();
 var tomorrow_day = tomorrow.getDay();
 
-// Display both today's and tomorrow's date
+// Display both the dates
 document.getElementById("curr-display").innerText =
   d_names[curr_day] + ", " + m_names[curr_month] + " " + curr_date;
 
