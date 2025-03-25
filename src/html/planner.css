@@ -39,6 +39,10 @@ nav a {
     color: var(--primary-color);
 }
 
+nav a:hover {
+    font-size: 1.4rem;
+}
+
 .meal-card {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -70,6 +74,16 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
     background-color: var(--secondary-color);
+}
+
+.add-button {
+    cursor: pointer;
+    background-color: #FDBF50;
+    border: 1px solid var(--primary-color);
+}
+
+.add-button:hover {
+    font-size: .9rem;
 }
 
 footer {
