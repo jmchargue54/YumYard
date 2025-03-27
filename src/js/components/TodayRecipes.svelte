@@ -11,6 +11,7 @@
 </script>
 
 <main>
+  <h2>Today</h2>
   <div id="recipe-container">
       <!-- {#each recipes as recipe}
           <div class="recipe">

@@ -9,9 +9,19 @@
     --color-yellow: #FDBF50;
 }
 
+body {
+    margin-bottom: 100px;
+}
+
 h1 {
     font-family: var(--main-font); 
     text-align: center;
+    color: var(--main-color);
+}
+
+h2 {
+    font-family: var(--main-font); 
+    text-align: left;
     color: var(--main-color);
 }
 
