@@ -1,11 +1,32 @@
+/* @import './universal.css'; */
 body{
-    background-color: #151C4B;
-    font-family: 'Zain', italic;
-    margin: 0;
-    padding: 0;
+    font-family: 'Zain', italic;  
+}
+
+h1{
+    color:aliceblue;
+}
+
+p{
+    font-size:1.5em;
 }
 
 .filter-button button{
-    background-color: #FDBF50;
-    color: #151C4B;
+    background-color: #151c4b;
+    border-color: aliceblue;
+    border-radius: 20px;
+    color: aliceblue;
+    height: min-content;
+    padding: 10px;
+    font-weight: 900;
+    font-size: larger;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
 }

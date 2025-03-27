@@ -15,9 +15,9 @@
   <div id="recipe-container">
       {#each recipes as recipe}
           <div class="recipe">
-              <h2>{recipe.title}</h2>
               <img src={recipe.image} alt={recipe.title} />
-              <p>{@html recipe.summary}</p>
+              <h2>{recipe.title}</h2>
+              <!-- <p>{@html recipe.summary}</p> -->
               <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
           </div>
       {/each}

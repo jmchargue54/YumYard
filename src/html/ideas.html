@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideas</title>
     <script type="module" src="/src/main.js"></script>
+    <script src="../js/mealType.js"></script>
     <link rel="stylesheet" href="/src/css/ideas.css">
 
 </head>
 <body>
     <h1>Ideas</h1>
-    <form class="filter-button">
-        <button type="button">Breakfast</button>
-        <button type="button">Lunch</button>
-        <button type="button">Dinner</button>
-        <button type="button">Dessert</button>
-    </form>
+    <div class="filterButton">
+        <!-- api endpoint by asking for a TYPE parameter -->
+        <button type="button" data-*="breakfast">Breakfast</button>
+        <button type="button" data-*="mainCourse">Main Course</button>
+        <button type="button" data-*="dessert">Dessert</button>
+    </div>
     <p>Here are some ideas for your next meal:</p>
-
-    <div id="app"></div>
+    <div id="results"></div>
 </body>
 </html>
