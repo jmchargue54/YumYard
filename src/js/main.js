@@ -18,7 +18,4 @@ const Ideas = mount(IdeasRecipes, {
 })
 
 
-export default { Today, Tmr, Ideas };
-
-
 renderHeaderFooter();

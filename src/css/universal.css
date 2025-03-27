@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackey&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+:root {
+    --main-font: 'slackey', sans-serif;
+    --body-font: 'Zain', sans-serif;
+    --main-color: #151C4B;
+    --color-white: #F4F4F8;
+    --color-orange: #FF724C;
+    --color-yellow: #FDBF50;
+}
+
+
+body {
+    margin-bottom: 100px;
+    background: linear-gradient(to bottom, var(--color-orange), var(--color-yellow));
+}
