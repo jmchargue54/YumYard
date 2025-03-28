@@ -9,13 +9,13 @@ header{
 }
 
 header h1 {
-    font-family: var(--main-text);
+    font-family: var(--main-font);
     font-size: 4rem;
 }
 
 body {
-    font-family: var(--body-text);
-    color: var(--primary-color);
+    font-family: var(--body-font);
+    color: var(--main-color);
     background: linear-gradient(-150deg, #FF724C, #FDBF50);
 }
 
@@ -25,7 +25,6 @@ nav {
 
 nav a {
     font-size: 1.3rem;
-    font-family: var(--body-text);
     text-decoration: none;
     padding: 15px;
     color: var(--primary-color);
@@ -44,19 +43,19 @@ nav a:hover {
 }
 
 .meal-card h2 {
-    font-family: var(--main-text);
+    font-family: var(--main-font);
     font-size: 1.3rem;
     padding: 20px;
 }
 
 .meal-card h4 {
     font-size: 1.2rem;
-    font-family: var(--main-text);
+    font-family: var(--main-font);
 }
 
 .card-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--main-color);
+    color: var(--color-white);
     text-align: center;
     padding: 50px;
 }
@@ -65,21 +64,16 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--color-white);
 }
 
 .add-button {
     cursor: pointer;
-    background-color: #FDBF50;
-    border: 1px solid var(--primary-color);
+    background-color: var(--color-yellow);
+    border: 1px solid var(--main-color);
 }
 
 .add-button:hover {
     font-size: .9rem;
 }
 
-footer {
-    text-align: center;
-    color: var(--primary-color);
-    padding: 20px;
-}
