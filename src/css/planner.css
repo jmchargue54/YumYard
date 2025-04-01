@@ -19,19 +19,9 @@ body {
     background: linear-gradient(-150deg, #FF724C, #FDBF50);
 }
 
-nav {
-    text-align: right;
-}
-
-nav a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    padding: 15px;
-    color: var(--primary-color);
-}
-
-nav a:hover {
-    font-size: 1.4rem;
+h1{
+    position: absolute;
+    margin-top: 65px;
 }
 
 .meal-card {
