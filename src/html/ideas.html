@@ -4,20 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideas</title>
-    <script type="module" src="/src/main.js"></script>
-    <script src="../js/mealType.js"></script>
-    <link rel="stylesheet" href="/src/css/ideas.css">
-
+    <script type="module" src="../js/ideas.js" defer></script>
 </head>
 <body>
-    <h1>Ideas</h1>
-    <div class="filterButton">
-        <!-- api endpoint by asking for a TYPE parameter -->
-        <button type="button" data-*="breakfast">Breakfast</button>
-        <button type="button" data-*="mainCourse">Main Course</button>
-        <button type="button" data-*="dessert">Dessert</button>
-    </div>
-    <p>Here are some ideas for your next meal:</p>
-    <div id="results"></div>
+    <header id="indexHeader"></header>
+    <div id="mealFilter"></div>
+    <footer id="indexFooter"></footer>
 </body>
 </html>
