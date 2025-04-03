@@ -3,14 +3,20 @@
 header{
     margin: 10px;
     margin-bottom: 0;
-    padding: 10px;
+    padding: 30px;
     border-bottom: 1px solid;
     text-align: center;
 }
 
-header h1 {
+h1 {
+    padding: 25px;
+}
+
+.planner {
     font-family: var(--main-font);
-    font-size: 4rem;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 100px;
 }
 
 body {
@@ -19,28 +25,24 @@ body {
     background: linear-gradient(-150deg, #FF724C, #FDBF50);
 }
 
-h1{
-    position: absolute;
-    margin-top: 65px;
-}
 
 .meal-card {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr;
     padding: 0;
-    margin: 10px;
+    margin: 20px;
     border: 2px solid;
 }
 
 .meal-card h2 {
     font-family: var(--main-font);
-    font-size: 1.3rem;
-    padding: 20px;
 }
 
 .meal-card h4 {
-    font-size: 1.2rem;
     font-family: var(--main-font);
+    font-size: 1.3rem;
+    margin-top: 0;
+
 }
 
 .card-header {
@@ -52,9 +54,10 @@ h1{
 
 .meals {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
     background-color: var(--color-white);
+    padding: 15px;
 }
 
 .add-button {
@@ -67,3 +70,23 @@ h1{
     font-size: .9rem;
 }
 
+/* Larger Views ******************************/
+@media only screen and (min-width: 768px) {
+
+    h1{
+        position: absolute;
+        font-size: 3rem;
+        padding: 10px;
+    }
+
+    .planner {
+        margin-left: 30px;
+    }
+        
+    .meal-card {
+        grid-template-columns: 1fr 4fr;
+    }
+    .meals{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
