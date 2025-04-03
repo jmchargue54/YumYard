@@ -74,14 +74,14 @@ body {
 /* Larger Views ******************************/
 @media only screen and (min-width: 768px) {
 
-    h1{
-        position: absolute;
-        font-size: 3rem;
-        padding: 10px;
+    #indexHeader h1{
+        font-size: 5rem;
+        padding: 0;
     }
 
     .planner {
-        margin-left: 30px;
+        margin-top: 120px;
+        margin-left: 34%;
     }
         
     .meal-card {
