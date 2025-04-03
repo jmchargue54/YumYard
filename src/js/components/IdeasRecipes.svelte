@@ -14,6 +14,7 @@
       if (!currentFavorites.some(fav => fav.title === recipe.title)) {
         return [...currentFavorites, recipe]; 
       }
+      console.log('currentFavorites:', currentFavorites);
       return currentFavorites;
     });
   } 

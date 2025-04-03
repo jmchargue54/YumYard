@@ -14,7 +14,6 @@
       if (!currentFavorites.some(fav => fav.title === recipe.title)) {
         return [...currentFavorites, recipe]; 
       }
-      console.log('favorites list:', favorites)
       console.log('currentFavorites:', currentFavorites);
       return currentFavorites;
     });
