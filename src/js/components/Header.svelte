@@ -4,15 +4,11 @@
   let nav_button;
   let navlist;
 
-  onMount(() => {
-    nav_button = document.getElementById("nav-button");
-    navlist = document.querySelector(`nav ul`);
-
-    nav_button.addEventListener('click', () => {
+  const handleClick = () => {
       nav_button.classList.toggle("open");
       navlist.classList.toggle("open");
-    });
-  });
+    };
+  onMount(() => {});
 </script>
 
 <style>
@@ -24,8 +20,8 @@
     width: fit-content;
     margin: 0 auto;
     margin-top: .5em;
-}
-nav {
+  }
+  nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -39,21 +35,57 @@ nav {
         color: var(--main-color);
         width: fit-content;
     }
-}
-@media (max-width: 500px) {
+  }
+  @media (max-width: 500px) {
     nav {
       align-items: center;
       margin: 0;
     }
-}
+
+    nav ul{
+    display: none;
+    padding-inline-start: 0px;
+    }
+
+    :global(nav ul.open){
+    display: flex;
+    flex-direction: column;
+    }
+
+    ul{
+    list-style: none;
+    }
+
+    nav ul li{
+      text-align: center;
+      margin: 10px;
+    }
+
+    nav ul li a{
+      color: black;
+      text-decoration: none;
+      padding: 5px;
+    }
+  }
+  @media (min-width: 501px){
+    #nav-button{
+      display: none;
+    }
+    nav ul {
+      list-style: none;
+    }
+  }
 </style>
 
 <div>
   <h1>Yum Yard</h1>
+  <button id="nav-button" bind:this={nav_button} class="nav-button" onclick={handleClick}>≡</button>
   <nav>
-    <a href="index.html">Main</a>
-    <a href="src/html/planner.html">Planner</a>
-    <a href="src/html/favorite.html">Favorites</a>
-    <a href="src/html/ideas.html">Ideas</a>
+    <ul bind:this={navlist}>
+      <li><a href="index.html">Main</a></li>
+      <li><a href="src/html/planner.html">Planner</a></li>
+      <li><a href="src/html/favorite.html">Favorites</a></li>
+      <li><a href="src/html/ideas.html">Ideas</a></li>
+    </ul>
   </nav>
 </div>
