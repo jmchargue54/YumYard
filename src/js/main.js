@@ -17,5 +17,4 @@ const Ideas = mount(IdeasRecipes, {
   target: document.getElementById('mainTmr'),
 })
 
-
 renderHeaderFooter();

@@ -82,10 +82,10 @@
   <button id="nav-button" bind:this={nav_button} class="nav-button" onclick={handleClick}>≡</button>
   <nav>
     <ul bind:this={navlist}>
-      <li><a href="index.html">Main</a></li>
-      <li><a href="src/html/planner.html">Planner</a></li>
-      <li><a href="src/html/favorite.html">Favorites</a></li>
-      <li><a href="src/html/ideas.html">Ideas</a></li>
+      <li><a href="/index.html">Main</a></li>
+      <li><a href="/html/planner.html">Planner</a></li>
+      <li><a href="/html/favorite.html">Favorites</a></li>
+      <li><a href="/html/ideas.html">Ideas</a></li>
     </ul>
   </nav>
 </div>
