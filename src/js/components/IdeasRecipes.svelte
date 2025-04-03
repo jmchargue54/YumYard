@@ -1,15 +1,25 @@
 <script>
-    import { onMount } from 'svelte';
-    import { getRandomRecipes } from '../api.js';
-  
-    let recipes = [];
-  
-  
-    onMount(async () => {
-        recipes = await getRandomRecipes();
+  import { onMount } from 'svelte';
+  import { getRandomRecipes } from '../api.js';
+  import { favorites } from '../stores.js';
+
+  let recipes = [];
+
+  onMount(async () => {
+      recipes = await getRandomRecipes();
+  });
+
+  function addToFavorites(recipe) {
+    favorites.update((currentFavorites) => {
+      if (!currentFavorites.some(fav => fav.title === recipe.title)) {
+        return [...currentFavorites, recipe]; 
+      }
+      console.log('currentFavorites:', currentFavorites);
+      return currentFavorites;
     });
-  </script>
-  
+  } 
+</script>
+
   <main>
     <h2>Ideas</h2>
     <div id="recipeContainer">
@@ -18,7 +28,7 @@
               <img src={recipe.image} alt={recipe.title} />
                 <h2>{recipe.title}</h2>
                 <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
-                <button id="addButton">Add to Favorites</button>
+                <button class="addButton" on:click={() => addToFavorites(recipe)}>Add to Favorites</button>
               </div>
         {/each} -->
         <div class="recipe">Recipe Here</div>
