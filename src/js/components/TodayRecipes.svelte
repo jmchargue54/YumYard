@@ -27,8 +27,10 @@
           <div class="recipe">
             <img src={recipe.image} alt={recipe.title} />
               <h2>{recipe.title}</h2>
-              <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
-              <button class="addButton" on:click={() => addToFavorites(recipe)}>Add to Favorites</button>
+              <div class="buttonGroup">
+                <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
+                <button class="addButton" on:click={() => addToFavorites(recipe)}>Add to Favorites</button>
+              </div>
             </div>
       {/each}
       <!-- <div class="recipe">Recipe Here</div>

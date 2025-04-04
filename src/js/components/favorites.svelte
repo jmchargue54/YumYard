@@ -1,14 +1,23 @@
 <script>
     import { favorites } from '../stores.js';
+
+    function RemoveFromFavorites(recipe) {
+        favorites.update((currentFavorites) => {
+            return currentFavorites.filter(fav => fav.title !== recipe.title);
+        });
+    }
   </script>
-  
-  <h2>Favorites List</h2>
-  <ul>
+  <div id="recipeContainer">
     {#each $favorites as recipe}
-      <li>
-        <img src={recipe.image} alt={recipe.title} width="50" />
-        <a href={recipe.sourceUrl} target="_blank">{recipe.title}</a>
-      </li>
+      <ul>
+        <div class="recipe">
+          <img src={recipe.image} alt={recipe.title} />
+          <h2>{recipe.title}</h2>
+          <div class="buttonGroup">
+            <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
+            <button class="removeButton" on:click={() => RemoveFromFavorites(recipe)}>Remove from Favorites</button>
+          </div>
+        </div>
+      </ul>
     {/each}
-  </ul>
-  
+  </div>
