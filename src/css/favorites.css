@@ -6,3 +6,12 @@ ul {
         max-width: 20%;
     }
 }
+
+.favoriteTitle {
+    font-family: var(--main-font);
+    color: var(--main-color);
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
