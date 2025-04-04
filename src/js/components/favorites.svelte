@@ -8,14 +8,13 @@
     }
   </script>
   
-  <h2>Favorites List</h2>
   <ul>
     {#each $favorites as recipe}
       <div class="recipe">
           <img src={recipe.image} alt={recipe.title} />
           <h2>{recipe.title}</h2>
           <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
-          <button class="removeButton" on:click={() => RemoveFromFavorites(recipe)}>Add to Favorites</button>
+          <button class="removeButton" on:click={() => RemoveFromFavorites(recipe)}>Remove from Favorites</button>
       </div>
     {/each}
   </ul>
