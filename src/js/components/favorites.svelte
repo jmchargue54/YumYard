@@ -7,14 +7,17 @@
         });
     }
   </script>
-  
-  <ul>
+  <div id="recipeContainer">
     {#each $favorites as recipe}
-      <div class="recipe">
+      <ul>
+        <div class="recipe">
           <img src={recipe.image} alt={recipe.title} />
           <h2>{recipe.title}</h2>
-          <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
-          <button class="removeButton" on:click={() => RemoveFromFavorites(recipe)}>Remove from Favorites</button>
-      </div>
+          <div class="buttonGroup">
+            <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
+            <button class="removeButton" on:click={() => RemoveFromFavorites(recipe)}>Remove from Favorites</button>
+          </div>
+        </div>
+      </ul>
     {/each}
-  </ul>
+  </div>

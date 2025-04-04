@@ -31,6 +31,7 @@ nav {
     nav {
       align-items: center;
       margin: 0;
+      margin-top: 10px;
     }
 }
 </style>

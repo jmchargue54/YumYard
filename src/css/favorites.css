@@ -1,10 +1,8 @@
-ul {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    div {
-        max-width: 20%;
-    }
+@import './universal.css';
+
+main {
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .favoriteTitle {
@@ -14,4 +12,47 @@ ul {
     top: 85px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-family: var(--body-font); 
+    text-align: left;
+    color: var(--main-color);
+}
+
+#recipeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.recipe {
+    border: 2px solid var(--color-white);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 90%;
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 722px) {
+    .recipe {
+        width: 400px;
+        max-width: 90%;
+    }
 }
