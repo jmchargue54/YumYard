@@ -1,3 +1,8 @@
 ul {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    div {
+        max-width: 20%;
+    }
 }
