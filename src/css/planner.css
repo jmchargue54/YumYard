@@ -34,8 +34,9 @@ body {
     border: 2px solid;
 }
 
-.meal-card h2 {
+.meal-card h3 {
     font-family: var(--main-font);
+    font-size: 2rem;
 }
 
 .meal-card h4 {
