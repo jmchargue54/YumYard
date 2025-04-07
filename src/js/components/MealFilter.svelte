@@ -128,7 +128,7 @@
         display: flex;
         flex-direction: column;
         width: 250px;
-        height: 90%;
+        height: 100%;
     }
 
     .recipe img {
