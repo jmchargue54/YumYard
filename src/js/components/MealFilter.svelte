@@ -3,6 +3,7 @@
     import { favorites } from '../stores.js';
 
     let recipes = [];
+    let searchQuery = '';
     const apiKey = 'aa6ac9f986a6471a92070b0c7e328fec'; // Hardcoded API key
 
     async function fetchRecipesByType(type) {
@@ -41,9 +42,25 @@
       return currentFavorites;
     });
   } 
+
+  function searchRecipes() {
+        // Filter recipes based on the search query
+        const filteredRecipes = recipes.filter(recipe =>
+            recipe.title.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        recipes = filteredRecipes; // Update the recipes array
+    }
 </script>
 
 <main>
+    <div class="searchBar">
+        <input
+            type="text"
+            placeholder="Search recipes..."
+            bind:value={searchQuery}
+        />
+        <button type="button" on:click={searchRecipes}>Search</button>
+    </div>
     <div class="filterButton">
         <button type="button" on:click={() => fetchRecipesByType('breakfast')}>Breakfast</button>
         <button type="button" on:click={() => fetchRecipesByType('main course')}>Main Course</button>
@@ -140,6 +157,34 @@
     body {
         display: flex;
         flex-direction: column;
+    }
+    .searchBar {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .searchBar input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    .searchBar button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #151c4b;
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .searchBar button:hover {
+        background-color: #0f1436;
     }
 
 @media (max-width: 722px) {
