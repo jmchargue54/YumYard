@@ -94,6 +94,7 @@
     main {
         margin-left: 30px;
         margin-right: 30px;
+        margin-bottom: 150px;
     }
 
     .favoriteTitle {
