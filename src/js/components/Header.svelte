@@ -1,5 +1,7 @@
 <script>
   import { onMount } from 'svelte';
+  import { userStore, route } from '../stores.svelte.js';
+  // import { logout } from '../stores.svelte.js';
 
   let nav_button;
   let navlist;
@@ -83,10 +85,11 @@
   <button id="nav-button" bind:this={nav_button} class="nav-button" onclick={handleClick}>≡</button>
   <nav>
     <ul bind:this={navlist}>
-      <li><a href="/index.html">Main</a></li>
-      <li><a href="/html/planner.html">Planner</a></li>
-      <li><a href="/html/favorite.html">Favorites</a></li>
-      <li><a href="/html/ideas.html">Ideas</a></li>
+      <li><a href="/index.html" class={route.pathname == "/index.html" ? "active" : ""}>Main</a></li>
+      <li><a href="/html/planner.html" class={route.pathname == "/html/planner.html" ? "active" : ""}>Planner</a></li>
+      <li><a href="/html/favorite.html" class={route.pathname == "/html/favorite.html" ? "active" : ""}>Favorites</a></li>
+      <li><a href="/html/ideas.html" class={route.pathname == "/html/ideas.html" ? "active" : ""}>Ideas</a></li>
+      <!-- <li><a href="#profile" class={route.pathname == "#profile" ? "active" : ""}>Profile</a></li> -->
     </ul>
   </nav>
 </div>
