@@ -49,7 +49,7 @@
         <button type="button" on:click={() => fetchRecipesByType('main course')}>Main Course</button>
         <button type="button" on:click={() => fetchRecipesByType('dessert')}>Dessert</button>
     </div>
-    <p>Here are some ideas for your next meal:</p>
+    <h2>Here are some ideas for your next meal:</h2>
     <div id="recipeContainer">
     <div id="results">
         {#if recipes.length > 0}
@@ -70,12 +70,7 @@
 </main>
 
 <style>
-    body {
-        font-family: 'Zain', italic;
-    }
-    h2 {
-        color: aliceblue;
-    }
+
     .filterButton button {
         background-color: #151c4b;
         border-color: aliceblue;
@@ -94,4 +89,62 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 3%;
     }
+    @import './universal.css';
+
+    main {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .favoriteTitle {
+        font-family: var(--main-font);
+        color: var(--main-color);
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    h2 {
+        font-family: var(--body-font); 
+        text-align: left;
+        color: var(--main-color);
+    }
+
+    #recipeContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .recipe {
+        border: 2px solid var(--color-white);
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: 90%;
+    }
+
+    .recipe img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+@media (max-width: 722px) {
+    .recipe {
+        width: 400px;
+        max-width: 90%;
+    }
+}
 </style>
