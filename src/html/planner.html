@@ -6,14 +6,15 @@
     <title>YumYard Planner</title>
     <script src="../js/planner.js" type="module"></script>
     <script src="../js/main.js" type="module"></script>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/planner.css">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/planner.css" />
   </head>
-  <header id="indexHeader">
-    <h1 class="planner">planner:</h1>
-  </header>
   <body>
-    <div class="cards">
+    <header id="indexHeader">
+      <h1 class="planner">planner:</h1>
+    </header>
+    <main id="planner"></main>  
+    <!-- <div class="cards">
       <section class="meal-card">
         <div class="card-header">
           <h3>Sunday</h3>
@@ -21,7 +22,11 @@
         <div class="meals">
           <div class="breakfast">
             <h4>Breakfast:</h4>
-            <button class="add-button">Add Recipe</button>
+            <div class="dropdown">
+              <button id="dropbtn" class="dropbtn">Add Recipe</button>
+              <div id="dropContent" class="drop-content"></div>
+              <div class="meal-slot" id="sunday-breakfast-slot"></div>
+            </div>
           </div>
           <div class="lunch">
             <h4>Lunch:</h4>
@@ -147,8 +152,7 @@
           </div>
         </div>
       </section>
-    </div>
-    <footer id="indexFooter">
-    </footer>
+    </div> -->
+    <footer id="indexFooter"></footer>
   </body>
 </html>
