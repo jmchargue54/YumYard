@@ -53,6 +53,7 @@
 </script>
 
 <main>
+    <h1 class="ideasTitle">Ideas</h1>
     <div class="searchBar">
         <input
             type="text"
@@ -115,6 +116,15 @@
     }
 
     .favoriteTitle {
+        font-family: var(--main-font);
+        color: var(--main-color);
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ideasTitle {
         font-family: var(--main-font);
         color: var(--main-color);
         position: absolute;
