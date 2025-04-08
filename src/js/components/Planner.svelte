@@ -14,10 +14,12 @@
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
+        <PlannerInput/>
+
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -32,11 +34,11 @@
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -47,15 +49,15 @@
     <div class="meals">
         <div class="breakfast">
         <h4>Breakfast:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -66,15 +68,15 @@
     <div class="meals">
         <div class="breakfast">
         <h4>Breakfast:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -85,15 +87,15 @@
     <div class="meals">
         <div class="breakfast">
         <h4>Breakfast:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -104,15 +106,15 @@
     <div class="meals">
         <div class="breakfast">
         <h4>Breakfast:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
@@ -123,15 +125,15 @@
     <div class="meals">
         <div class="breakfast">
         <h4>Breakfast:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="lunch">
         <h4>Lunch:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
         <div class="dinner">
         <h4>Dinner:</h4>
-        <button class="add-button">Add Recipe</button>
+        <PlannerInput/>
         </div>
     </div>
     </section>
