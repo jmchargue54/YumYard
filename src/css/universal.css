@@ -15,7 +15,7 @@ body {
     background: linear-gradient(to bottom, var(--color-orange), var(--color-yellow));
 }
 
-.addButton, .removeButton, .recipe a {
+.addButton, .removeButton, .removeBtn, .recipe a {
     background-color: var(--main-color);
     color: var(--color-white);
     border: none;

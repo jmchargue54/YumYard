@@ -61,16 +61,25 @@ body {
     padding: 15px;
 }
 
-.add-button {
+.dropbtn {
     cursor: pointer;
     background-color: var(--color-yellow);
     border: 1px solid var(--main-color);
     margin-bottom: 15px;
 }
 
-.add-button:hover {
-    font-size: .9rem;
+
+#dropContent {
+    font-size: 1.2rem;
+    display: none; 
+    position: absolute; 
+    background-color: var(--color-white); 
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px 0px var(--main-color); 
+    z-index: 1;
 }
+
+
 
 /* Larger Views ******************************/
 @media only screen and (min-width: 768px) {
