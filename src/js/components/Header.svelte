@@ -89,7 +89,6 @@
       <li><a href="/html/planner.html" class={route.pathname == "/html/planner.html" ? "active" : ""}>Planner</a></li>
       <li><a href="/html/favorite.html" class={route.pathname == "/html/favorite.html" ? "active" : ""}>Favorites</a></li>
       <li><a href="/html/ideas.html" class={route.pathname == "/html/ideas.html" ? "active" : ""}>Ideas</a></li>
-      <!-- <li><a href="#profile" class={route.pathname == "#profile" ? "active" : ""}>Profile</a></li> -->
     </ul>
   </nav>
 </div>

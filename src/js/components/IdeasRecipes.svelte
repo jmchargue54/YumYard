@@ -1,7 +1,9 @@
 <script>
   import { onMount } from 'svelte';
   import { getRandomRecipes } from '../api.js';
-  import { favorites } from '../stores.js';
+  // import { addFavorite } from '../favoritesService.js';
+  // import { userStore } from '../stores.svelte.js';
+  import { supabase } from '../supabaseClient.mjs'; 
 
   let recipes = [];
 
@@ -9,35 +11,37 @@
       recipes = await getRandomRecipes();
   });
 
-  function addToFavorites(recipe) {
-    favorites.update((currentFavorites) => {
-      if (!currentFavorites.some(fav => fav.title === recipe.title)) {
-        return [...currentFavorites, recipe]; 
-      }
-      console.log('currentFavorites:', currentFavorites);
-      return currentFavorites;
-    });
-  } 
+  
+  export async function addFavorites(recipe) {
+  const { data, error } = await supabase
+    .from('favorites')
+    .insert([
+    {title: recipe.title},
+    {img: recipe.image},
+    {sourceUrl: recipe.sourceUrl}
+    ])
+    .select();
+  }
 </script>
 
   <main>
     <h2>Ideas</h2>
     <div id="recipeContainer">
-        <!-- {#each recipes as recipe}
+        {#each recipes as recipe}
             <div class="recipe">
               <img src={recipe.image} alt={recipe.title} />
                 <h2>{recipe.title}</h2>
                 <div class="buttonGroup">
                   <a href={recipe.sourceUrl} target="_blank">View Recipe</a>
-                  <button class="addButton" on:click={() => addToFavorites(recipe)}>Add to Favorites</button>
+                  <button class="addButton" on:click={() => addFavorites(recipe)}>Add to Favorites</button>
                 </div>
               </div>
-        {/each} -->
+        {/each}
+        <!-- <div class="recipe">Recipe Here</div>
         <div class="recipe">Recipe Here</div>
         <div class="recipe">Recipe Here</div>
         <div class="recipe">Recipe Here</div>
-        <div class="recipe">Recipe Here</div>
-        <div class="recipe">Recipe Here</div>
+        <div class="recipe">Recipe Here</div> -->
   
       </div>
   </main>

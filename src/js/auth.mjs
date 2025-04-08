@@ -8,6 +8,7 @@ export async function signUp(user) {
   });
 
   console.log(data, error);
+  return { data, error };
 }
 
 export async function login(user) {
@@ -24,6 +25,8 @@ export async function login(user) {
   }
   console.log(data, error);
   route.pathname = "#posts";
+
+  return { data, error };
 }
 
 export async function checkLogin() {
@@ -43,4 +46,5 @@ export async function checkLogin() {
 
 export async function logout() {
   let { error } = await supabase.auth.signOut();
+  return { error };
 }

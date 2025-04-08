@@ -12,17 +12,17 @@ const app = mount(App, {
 
 export default app;
 
-const Today = mount(TodayRecipes, {
-  target: document.getElementById('mainToday'),
-})
+// const Today = mount(TodayRecipes, {
+//   target: document.getElementById('mainToday'),
+// })
 
-const Tmr = mount(TmrRecipes, {
-  target: document.getElementById('mainTmr'),
-})
+// const Tmr = mount(TmrRecipes, {
+//   target: document.getElementById('mainTmr'),
+// })
 
-const Ideas = mount(IdeasRecipes, {
-  target: document.getElementById('mainTmr'),
-})
+// const Ideas = mount(IdeasRecipes, {
+//   target: document.getElementById('mainTmr'),
+// })
 
 renderHeaderFooter();
 
