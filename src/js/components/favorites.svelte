@@ -8,6 +8,9 @@
     }
   </script>
   <div id="recipeContainer">
+    {#if $favorites.length === 0}
+      <p>No favorite recipes added yet.</p>
+    {/if}
     {#each $favorites as recipe}
       <ul>
         <div class="recipe">
