@@ -4,13 +4,9 @@
     import { checkLogin } from '../auth.mjs';
     import { userStore } from '../stores.svelte.js';
 
-    let isLoggedIn;
-
-    $: isLoggedIn = $userStore?.isLoggedIn;
-
     onMount(async () => {
       await checkLogin();
-      if (!isLoggedIn) {
+      if (!userStore.isLoggedIn) {
         window.location.href = "/html/login.html"; 
       }
     });
