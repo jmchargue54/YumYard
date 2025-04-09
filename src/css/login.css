@@ -1,0 +1,5 @@
+@import './universal.css';
+
+html {
+    height: 100%;
+}

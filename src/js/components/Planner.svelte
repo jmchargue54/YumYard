@@ -1,5 +1,16 @@
 <script>
     import PlannerInput from "./PlannerInput.svelte";
+
+    import { onMount } from 'svelte';
+    import { checkLogin } from '../auth.mjs';
+    import { userStore } from '../stores.svelte.js';
+
+    onMount(async () => {
+      await checkLogin();
+      if (!userStore.isLoggedIn) {
+        window.location.href = "/html/login.html"; 
+      }
+    });
 </script>
 
 <div class="cards">

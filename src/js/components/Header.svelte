@@ -87,6 +87,7 @@
       <li><a href="/html/planner.html">Planner</a></li>
       <li><a href="/html/favorite.html">Favorites</a></li>
       <li><a href="/html/ideas.html">Ideas</a></li>
+      <li><a href="/html/login">Log In</a></li>
     </ul>
   </nav>
 </div>

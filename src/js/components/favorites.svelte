@@ -1,5 +1,19 @@
 <script>
     import { favorites } from '../stores.js';
+    import { onMount } from 'svelte';
+    import { checkLogin } from '../auth.mjs';
+    import { userStore } from '../stores.svelte.js';
+
+    let isLoggedIn;
+
+    $: isLoggedIn = $userStore?.isLoggedIn;
+
+    onMount(async () => {
+      await checkLogin();
+      if (!isLoggedIn) {
+        window.location.href = "/html/login.html"; 
+      }
+    });
 
     function RemoveFromFavorites(recipe) {
         favorites.update((currentFavorites) => {
@@ -8,6 +22,10 @@
     }
   </script>
   <div id="recipeContainer">
+    {#if $favorites.length === 0}
+      <p>No favorite recipes found.</p>
+    {/if}
+
     {#each $favorites as recipe}
       <ul>
         <div class="recipe">
