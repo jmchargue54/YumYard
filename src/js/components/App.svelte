@@ -1,12 +1,12 @@
 <script>
-    import Login from "./Login.svelte";
     // import UserProfile from "./UserProfile.svelte";
     import { route, userStore } from "../stores.svelte.js";
     import { checkLogin, login } from "../auth.mjs";
     import { onMount } from "svelte";
     import Favorites from "./favorites.svelte";
     import Planner from "./Planner.svelte";
-    import Ideas from './Ideas.svelte';
+    import MealFilter from "./MealFilter.svelte";
+    import Login from "./Login.svelte";
   
     let urlParams = $state();
   
@@ -44,7 +44,7 @@
       {:else if route.pathname == "/html/planner.html"}
         <Planner />
       {:else if route.pathname == "/html/ideas.html"}
-        <Ideas />
+        <MealFilter />
       {:else}
         <h2>404</h2>
         <p>Page not found.</p>
