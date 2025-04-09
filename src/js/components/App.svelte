@@ -4,7 +4,7 @@
     import { route, userStore } from "../stores.svelte.js";
     import { checkLogin, login } from "../auth.mjs";
     import { onMount } from "svelte";
-    import Favorites from "../stores";
+    import Favorites from "./favorites.svelte";
     import Planner from "./Planner.svelte";
     import Ideas from './Ideas.svelte';
   
@@ -34,25 +34,24 @@
     <h1>Sup demo</h1>
   
     <div class="card">
-    {#if $userStore.isLoggedIn}
-      {#if $route.pathname == "/html/index.html" || route.pathname == ""}
+    {#if userStore.isLoggedIn}
+      {#if route.pathname == "/html/index.html" || route.pathname == ""}
         <h2>Home</h2>
         <p>This is the home page.</p>
-      {:else if $route.pathname == "/html/favorites.html"}
+      {:else if route.pathname == "/html/favorites.html"}
         <h2>Posts</h2>
         <Favorites />
-      {:else if $route.pathname == "/html/planner.html"}
+      {:else if route.pathname == "/html/planner.html"}
         <Planner />
-      {:else if $route.pathname == "/html/ideas.html"}
+      {:else if route.pathname == "/html/ideas.html"}
         <Ideas />
       {:else}
         <h2>404</h2>
         <p>Page not found.</p>
       {/if}
-    {/if}
-    {:else}
+        {:else}
         <Login />
-    {/else}
+      {/if}
     </div>
   </main>
   

@@ -2,40 +2,45 @@ import { supabase } from "./supabaseClient.mjs";
 import { userStore, route } from "./stores.svelte.js";
 
 export async function signUp(user) {
-    const { data, error } = await supabase.auth.signUp({
-      email: user.email,
-      password: user.password
-    });
-    if (error) throw error;
-    return data;
+  let { data, error } = await supabase.auth.signUp({
+    email: user.email,
+    password: user.password
+  });
+
+  console.log(data, error);
+}
+
+export async function login(user) {
+  let { data, error } = await supabase.auth.signInWithPassword({
+    email: user.email,
+    password: user.password
+  });
+  if (data) {
+    userStore.isLoggedIn = true;
+    userStore.user = data.user;
+  } else {
+    userStore.isLoggedIn = false;
+    userStore.user = null;
   }
-  
-  export async function login(user) {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: user.email,
-      password: user.password
-    });
-    if (error) throw error;
-  
-    userStore.set({ isLoggedIn: true, user: data.user });    userStore.user = data.user;
-    route.set({ pathname: "/html/index.html" });  
-    return data;
-  }
-  
+  console.log(data, error);
+  route.pathname = "/html/index.html";
+}
+
 export async function checkLogin() {
   const {
     data: { session },
     error
   } = await supabase.auth.getSession();
-
- if (session) {
-    userStore.set({ isLoggedIn: true, user: session.user }); // ✅
+  if (session) {
+    userStore.isLoggedIn = true;
+    userStore.user = session.user;
   } else {
-    userStore.set({ isLoggedIn: false, user: null }); // ✅
-  }  console.log(session);
+    userStore.isLoggedIn = false;
+    userStore.user = null;
+  }
+  console.log(session);
 }
 
 export async function logout() {
-  const { error } = await supabase.auth.signOut();
-  userStore.set({ isLoggedIn: false, user: null });
+  let { error } = await supabase.auth.signOut();
 }
