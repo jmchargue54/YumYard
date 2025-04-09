@@ -9,10 +9,6 @@
     --color-yellow: #FDBF50;
 }
 
-html {
-    height: 100%;
-}
-
 body {
     margin-bottom: 100px;
     background: linear-gradient(to bottom, var(--color-orange), var(--color-yellow));
